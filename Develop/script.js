@@ -1,9 +1,43 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
+// $(document).ready(function() {
+//   $("div").wrap(<div id="date-display"></div>);
+// });
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-let today = dayjs();
-$("date-display").text(today.format("MM D, YYYY"));
+//function to set color: past, present, future
+// function setTimeBlockColor() {
+//   let currentHour = dayjs().hour();
+//   let hour = $(this).attr('id');
+// };
+
+const timeBlocks = document.querySelectorAll(".time-block");
+
+const currentHour = dayjs().hour();
+console.log(currentHour);
+//function to save information to local file.
+function saveData() {
+
+};
+
+//if/else statments to color code the blocks
+for (const timeBlock of timeBlocks) {
+  console.log(timeBlock)
+  let hour = parseInt (timeBlock.getAttribute("id"));
+  console.log(hour);
+  if (hour < currentHour) {
+    console.log("past")
+    timeBlock.classList.add("past");
+  } else if (hour === currentHour) {
+    console.log("present")
+    timeBlock.classList.add("present");
+  } else if (hour > currentHour) {
+    console.log("future")
+    timeBlock.classList.add("future");
+  }
+}
+
+
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
@@ -25,3 +59,8 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+
+$(".saveBtn").on("click", function(event){
+  console.log(event.target);
+})

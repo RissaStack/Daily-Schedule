@@ -16,6 +16,20 @@ textarea {
   white-space: pre-wrap;
 }
 
+#currentDay {
+  display: flex;
+  justify-content: center;
+  color: rebeccapurple;
+  font-weight: bolder;
+}
+
+#currentTime {
+  display: flex;
+  justify-content: center;
+  color: rebeccapurple;
+  font-weight: lighter;
+}
+
 .time-block {
   border-radius: 15px;
 }
