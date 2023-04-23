@@ -5,10 +5,12 @@ for (let i = 9; i <= 18; i++) {
   }
 }
 
+//setting my variables to create the time and date at the top.
 const timeBlocks = document.querySelectorAll(".time-block");
 
 const currentHour = dayjs().hour();
 
+//this loop is going to be used for both the color of the time blocks and the local storage. 
 for (const timeBlock of timeBlocks) {
   let hour = parseInt(timeBlock.getAttribute("id"));
   const toDo = window.localStorage.getItem(hour);
@@ -22,6 +24,7 @@ for (const timeBlock of timeBlocks) {
   }
 }
 
+//This event listener is for the save buttons for the local storage.
 $(".saveBtn").on("click", function(event){
   const key = event.currentTarget.id.split("-")[1];
   const value = document.getElementById(`input-${key}`).value;
