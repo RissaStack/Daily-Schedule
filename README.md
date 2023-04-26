@@ -14,4 +14,4 @@ I learned how to create conditional statements to work with the style sheet. I l
 JavaScript, HTML, CSS, and Day.JS
 
 ## image of deployed website
-![Image of application](./assets/rissastack.github.io_Daily-Schedule_.png  "Daily Schedule")
+![Image of application](./assets/rissastack.github.io_Daily-Schedule_.png) 
